@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Live Tracking | Prime Xpress</title>
+
+  <link rel="stylesheet" href="live-tracking.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Live Shipment Tracking</h1>
+
+    <p class="subtitle">
+      Enter tracking ID to check live shipment status.
+    </p>
+
+    <!-- SEARCH BOX -->
+
+    <div class="search-box">
+
+      <input
+      type="text"
+      id="trackingInput"
+      placeholder="Enter Tracking ID">
+
+      <button onclick="trackShipment()">
+        Track Now
+      </button>
+
+    </div>
+
+    <!-- RESULT -->
+
+    <div class="result-box" id="resultBox">
+
+      <div class="tracking-id">
+        Tracking ID :
+        <span id="trackingIdText"></span>
+      </div>
+
+      <div class="status-box">
+
+        <h2>
+          Shipment Status
+        </h2>
+
+        <p id="statusText">
+          In Transit
+        </p>
+
+      </div>
+
+      <!-- TIMELINE -->
+
+      <div class="timeline">
+
+        <div class="step active">
+
+          <div class="circle">✓</div>
+
+          <h3>Order Placed</h3>
+
+        </div>
+
+        <div class="line active-line"></div>
+
+        <div class="step active">
+
+          <div class="circle">✓</div>
+
+          <h3>In Transit</h3>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="step">
+
+          <div class="circle">3</div>
+
+          <h3>Out For Delivery</h3>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="step">
+
+          <div class="circle">4</div>
+
+          <h3>Delivered</h3>
+
+        </div>
+
+      </div>
+
+      <!-- DETAILS -->
+
+      <div class="details">
+
+        <div class="detail-card">
+
+          <h4>
+            Current Location
+          </h4>
+
+          <p id="locationText">
+            Hyderabad Logistics Hub
+          </p>
+
+        </div>
+
+        <div class="detail-card">
+
+          <h4>
+            Expected Delivery
+          </h4>
+
+          <p id="deliveryText">
+            Tomorrow, 5:30 PM
+          </p>
+
+        </div>
+
+        <div class="detail-card">
+
+          <h4>
+            Shipment Type
+          </h4>
+
+          <p>
+            Express Delivery
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function trackShipment(){
+
+      let trackingId =
+      document.getElementById("trackingInput").value;
+
+      let resultBox =
+      document.getElementById("resultBox");
+
+      let trackingIdText =
+      document.getElementById("trackingIdText");
+
+      let statusText =
+      document.getElementById("statusText");
+
+      let locationText =
+      document.getElementById("locationText");
+
+      let deliveryText =
+      document.getElementById("deliveryText");
+
+      if(trackingId === ""){
+
+        alert("Please enter tracking ID");
+
+        resultBox.style.display = "none";
+
+        return;
+      }
+
+      // DEMO TRACKING IDs
+
+      if(trackingId === "PX1001"){
+
+        trackingIdText.innerHTML = trackingId;
+
+        statusText.innerHTML = "In Transit";
+
+        locationText.innerHTML =
+        "Hyderabad Logistics Hub";
+
+        deliveryText.innerHTML =
+        "Tomorrow, 5:30 PM";
+
+      }
+
+      else if(trackingId === "PX2002"){
+
+        trackingIdText.innerHTML = trackingId;
+
+        statusText.innerHTML =
+        "Out For Delivery";
+
+        locationText.innerHTML =
+        "Visakhapatnam";
+
+        deliveryText.innerHTML =
+        "Today, 7:00 PM";
+
+      }
+
+      else{
+
+        trackingIdText.innerHTML = trackingId;
+
+        statusText.innerHTML =
+        "Shipment Not Found";
+
+        locationText.innerHTML = "-";
+
+        deliveryText.innerHTML = "-";
+      }
+
+      resultBox.style.display = "block";
+    }
+
+  </script>
+
+</body>
+</html>

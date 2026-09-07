@@ -1,0 +1,20 @@
+[
+  {
+    "trackingId": "PRIME001",
+    "status": "In Transit",
+    "location": "Hyderabad",
+    "deliveryDate": "12 May 2026"
+  },
+  {
+    "trackingId": "PRIME002",
+    "status": "Delivered",
+    "location": "Chennai",
+    "deliveryDate": "08 May 2026"
+  },
+  {
+    "trackingId": "LOGI555",
+    "status": "Out for Delivery",
+    "location": "Bangalore",
+    "deliveryDate": "10 May 2026"
+  }
+]

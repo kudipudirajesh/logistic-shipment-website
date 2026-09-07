@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Prime Xpress Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-box">
+
+        <!-- LOGIN TABS -->
+
+        <div class="login-tabs">
+
+            <button id="adminBtn" class="active">
+                Admin
+            </button>
+
+            <button id="customerBtn">
+                Customer
+            </button>
+
+        </div>
+
+        <!-- TITLE -->
+
+        <h1 id="loginTitle">
+            Admin Sign In
+        </h1>
+
+        <!-- FORM -->
+
+        <form>
+
+            <input 
+                type="email" 
+                placeholder="Enter Email"
+                required
+            >
+
+            <input 
+                type="password" 
+                placeholder="Enter Password"
+                required
+            >
+
+            <button type="submit" class="signin-btn">
+                Sign In
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const adminBtn = document.getElementById("adminBtn");
+const customerBtn = document.getElementById("customerBtn");
+
+const loginTitle = document.getElementById("loginTitle");
+
+
+// ADMIN TAB
+
+adminBtn.onclick = () => {
+
+    loginTitle.innerText = "Admin Sign In";
+
+    adminBtn.classList.add("active");
+
+    customerBtn.classList.remove("active");
+};
+
+
+// CUSTOMER TAB
+
+customerBtn.onclick = () => {
+
+    loginTitle.innerText = "Customer Sign In";
+
+    customerBtn.classList.add("active");
+
+    adminBtn.classList.remove("active");
+};
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url('truck-bg.jpg.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.login-page{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.login-box{
+    width:100%;
+    max-width:420px;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,0.22);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.35);
+}
+
+/* LOGIN TABS */
+
+.login-tabs{
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:30px;
+}
+
+.login-tabs button{
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.18);
+
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.login-tabs button:hover{
+    background:rgba(255,255,255,0.28);
+}
+
+.login-tabs .active{
+    background:#f5c542;
+
+    color:#111;
+}
+
+/* TITLE */
+
+.login-box h1{
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:28px;
+
+    font-size:38px;
+
+    font-weight:700;
+}
+
+/* INPUTS */
+
+.login-box input{
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,0.92);
+
+    transition:0.3s;
+}
+
+.login-box input:focus{
+    transform:scale(1.02);
+
+    box-shadow:
+    0 0 10px rgba(245,197,66,0.4);
+}
+
+/* SIGN IN BUTTON */
+
+.signin-btn{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#f5c542;
+
+    color:#111;
+
+    font-size:17px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.signin-btn:hover{
+    background:#ffd95c;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 5px 18px rgba(245,197,66,0.45);
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+    .login-box{
+        padding:30px 24px;
+    }
+
+    .login-box h1{
+        font-size:30px;
+    }
+}

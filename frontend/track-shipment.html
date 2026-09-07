@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Track Shipment</title>
+
+  <link rel="stylesheet" href="track-shipment.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Track Shipment</h1>
+
+    <p>
+      Enter your tracking ID to check shipment status.
+    </p>
+
+    <form id="trackForm">
+
+      <input 
+      type="text"
+      id="trackingInput"
+      placeholder="Enter Tracking ID"
+      required>
+
+      <button type="submit">
+        Track Now
+      </button>
+
+    </form>
+
+    <!-- RESULT BOX -->
+
+    <div class="result-box" id="resultBox" style="display:none;">
+
+      <h2>Shipment Found</h2>
+
+      <p>
+        <span>Status:</span> In Transit
+      </p>
+
+      <p>
+        <span>Current Location:</span> Hyderabad Hub
+      </p>
+
+      <p>
+        <span>Expected Delivery:</span> Tomorrow
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const form = document.getElementById("trackForm");
+
+    const resultBox = document.getElementById("resultBox");
+
+    form.addEventListener("submit", function(e){
+
+      e.preventDefault();
+
+      const trackingId =
+      document.getElementById("trackingInput").value;
+
+      if(trackingId !== ""){
+
+        resultBox.style.display = "block";
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

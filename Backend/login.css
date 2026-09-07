@@ -1,0 +1,501 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    background:#fff;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    width:100%;
+    height:80px;
+
+    background:#071739;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    z-index:1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+    font-size:38px;
+    font-weight:700;
+
+    color:white;
+
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#f5d27a;
+}
+
+/* ================= MENU ================= */
+
+nav ul{
+    display:flex;
+    align-items:center;
+
+    gap:30px;
+
+    list-style:none;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    text-decoration:none;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#f5d27a;
+}
+
+nav ul li a i{
+    margin-left:5px;
+
+    font-size:12px;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown-content{
+    position:absolute;
+
+    top:42px;
+    left:0;
+
+    min-width:220px;
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    display:none;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a{
+    display:block;
+
+    padding:14px 18px;
+
+    color:#111;
+}
+
+.dropdown-content a:hover{
+    background:#f5f5f5;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    flex-shrink:0;
+}
+
+/* ================= SEARCH BOX ================= */
+
+.search-box{
+    width:220px;
+    height:42px;
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+}
+
+.search-box input{
+    flex:1;
+
+    height:100%;
+
+    border:none;
+    outline:none;
+
+    padding:0 18px;
+
+    font-size:14px;
+}
+
+.search-box button{
+    width:55px;
+    height:42px;
+
+    border:none;
+
+    background:#f5d27a;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* ================= SIGN IN BUTTON ================= */
+
+.sign-btn{
+    height:42px !important;
+
+    padding:0 28px !important;
+
+    background:#f5d27a !important;
+
+    color:#111 !important;
+
+    border:none !important;
+
+    border-radius:30px !important;
+
+    font-size:15px !important;
+    font-weight:600 !important;
+
+    cursor:pointer !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    gap:8px !important;
+
+    white-space:nowrap !important;
+
+    transition:0.3s !important;
+
+    box-shadow:0 4px 12px rgba(245,210,122,0.35) !important;
+
+    outline:none !important;
+}
+
+.sign-btn i{
+    font-size:14px;
+}
+
+.sign-btn:hover{
+    background:#ffe07a !important;
+
+    transform:translateY(-2px);
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f5d27a;
+
+    color:#111;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= SECONDARY BUTTON ================= */
+
+.secondary-btn{
+    padding:12px 28px;
+
+    border:2px solid white;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.secondary-btn:hover{
+    background:white;
+
+    color:#111;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url('truck-bg.jpg.png');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 80px 60px;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-content h1{
+    font-size:78px;
+
+    line-height:1.1;
+
+    color:white;
+
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:#f5d27a;
+}
+
+.hero-content p{
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+
+    gap:20px;
+}
+
+/* ================= TRACKING ================= */
+
+.tracking{
+    padding:80px;
+
+    text-align:center;
+}
+
+.tracking h2{
+    margin-bottom:30px;
+}
+
+.tracking-box{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+.tracking-box input{
+    width:320px;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    padding:80px;
+
+    background:#f8f9fc;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.service-card{
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:48px;
+
+    margin-bottom:20px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    padding:80px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+
+    border-radius:20px;
+}
+
+.about-text h2{
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#071739;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:991px){
+
+    nav{
+        padding:0 20px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero{
+        padding:120px 30px 60px;
+    }
+
+    .hero-content h1{
+        font-size:52px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .search-box{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .tracking-box{
+        flex-direction:column;
+    }
+
+    .tracking-box input{
+        width:100%;
+    }
+}

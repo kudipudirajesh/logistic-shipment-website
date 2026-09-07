@@ -1,0 +1,84 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+}
+
+.chat-page{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+.chat-box{
+  background:#fff;
+  width:550px;
+  padding:50px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.chat-box i{
+  font-size:70px;
+  color:#ff4d6d;
+  margin-bottom:25px;
+}
+
+.chat-box h1{
+  font-size:40px;
+  color:#0d1b2a;
+  margin-bottom:20px;
+}
+
+.chat-box p{
+  font-size:17px;
+  color:#555;
+  line-height:1.7;
+  margin-bottom:35px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+form input,
+form textarea{
+  width:100%;
+  padding:16px;
+  border:1px solid #ccc;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+form textarea{
+  height:150px;
+  resize:none;
+}
+
+button{
+  padding:16px;
+  border:none;
+  background:#0d1b2a;
+  color:#fff;
+  font-size:18px;
+  border-radius:50px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ffb703;
+  color:#000;
+}

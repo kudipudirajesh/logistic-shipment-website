@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Prime Xpress Logistics</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            Prime <span>Xpress</span>
+        </div>
+
+        <!-- MENU -->
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <!-- SERVICES -->
+
+            <li class="dropdown">
+
+                <a href="services.html">
+                    Services
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+
+                <ul class="dropdown-content">
+
+                    <li>
+                        <a href="road-transport.html">
+                            Road Transport
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parcel-delivery.html">
+                            Parcel Delivery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="warehouse.html">
+                            Warehouse
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="express-delivery.html">
+                            Express Delivery
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- TRACKING -->
+
+            <li class="customer-dropdown">
+
+                <a href="tracking.html">
+                    Tracking
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+
+                <ul class="customer-menu">
+
+                    <li>
+                        <a href="track-shipment.html">
+                            Track Shipment
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="live-tracking.html">
+                            Live Tracking
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shipment-history.html">
+                            Shipment History
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- SHIPPING -->
+
+            <li class="dropdown">
+
+                <a href="shipping.html">
+                    Shipping
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+
+                <ul class="dropdown-content">
+
+                    <li>
+                        <a href="create-shipment.html">
+                            Create Shipment
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shipping-rates.html">
+                            Shipping Rates
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="schedule-pickup.html">
+                            Schedule Pickup
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- ABOUT -->
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <!-- CUSTOMER SUPPORT -->
+
+            <li>
+                <a href="customer-support.html">
+                    Customer Support
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="nav-right">
+
+            <!-- SEARCH BOX -->
+
+            <div class="search-box">
+
+                <input
+                type="text"
+                placeholder="Search...">
+
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+            <!-- SIGN IN -->
+
+            <button
+            type="button"
+            class="sign-btn"
+            onclick="window.location.href='login.html'">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Sign In</span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Fast & Reliable
+
+                <span>Logistics</span>
+
+                Services
+
+            </h1>
+
+            <p>
+
+                Delivering parcels, cargo,
+                and business shipments across India
+                with speed, security, and trust.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                class="btn"
+                onclick="window.location.href='tracking.html'">
+
+                    Track Shipment
+
+                </button>
+
+                <button
+                class="secondary-btn"
+                onclick="window.location.href='services.html'">
+
+                    Learn More
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TRACKING SECTION ================= -->
+
+    <section class="tracking-section">
+
+        <h2>
+            Track Your Shipment
+        </h2>
+
+        <div class="tracking-box">
+
+            <input 
+            type="text"
+            id="trackingInput"
+            placeholder="Enter Tracking ID">
+
+            <button id="trackBtn">
+                Track Now
+            </button>
+
+        </div>
+
+        <!-- RESULT BOX -->
+
+        <div class="result-box"
+        id="resultBox"
+        style="display:none;">
+
+        </div>
+
+    </section>
+    
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>
+                Our Services
+            </h2>
+
+            <p>
+                Complete logistics and transportation solutions.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <!-- ROAD -->
+
+            <div
+            class="service-card"
+            onclick="window.location.href='road-transport.html'">
+
+                <div class="icon">🚚</div>
+
+                <h3>
+                    Road Transport
+                </h3>
+
+                <p>
+                    Fast and secure transportation services.
+                </p>
+
+            </div>
+
+            <!-- PARCEL -->
+
+            <div
+            class="service-card"
+            onclick="window.location.href='parcel-delivery.html'">
+
+                <div class="icon">📦</div>
+
+                <h3>
+                    Parcel Delivery
+                </h3>
+
+                <p>
+                    Safe parcel delivery with real-time tracking.
+                </p>
+
+            </div>
+
+            <!-- WAREHOUSE -->
+
+            <div
+            class="service-card"
+            onclick="window.location.href='warehouse.html'">
+
+                <div class="icon">🏭</div>
+
+                <h3>
+                    Warehouse
+                </h3>
+
+                <p>
+                    Warehouse and storage solutions.
+                </p>
+
+            </div>
+
+            <!-- EXPRESS -->
+
+            <div
+            class="service-card"
+            onclick="window.location.href='express-delivery.html'">
+
+                <div class="icon">⚡</div>
+
+                <h3>
+                    Express Delivery
+                </h3>
+
+                <p>
+                    Super fast delivery for urgent shipments.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <img
+        src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1974&auto=format&fit=crop"
+        alt="logistics">
+
+        <div class="about-text">
+
+            <h2>
+                India's Trusted Logistics Partner
+            </h2>
+
+            <p>
+
+                Prime Xpress Logistics provides
+                transportation and logistics services
+                across India with fast, secure and
+                reliable delivery solutions.
+
+            </p>
+
+            <button
+            class="btn"
+            onclick="window.location.href='services.html'">
+
+                Read More
+
+            </button>
+
+        </div>
+
+    </section>
+    </section> <!-- highlights section ends -->
+
+<div class="section-divider">
+
+    <span></span>
+
+    <i>★</i>
+
+    <span></span>
+
+</div>
+
+<section class="support-heading">
+    <!-- ================= COMPANY HIGHLIGHTS ================= -->
+
+<section class="highlights">
+
+    <div class="highlight-heading">
+
+        <h3>
+            Flexibility, Reliability and Scale
+        </h3>
+
+        <h1>
+            The Answer is Prime Xpress
+        </h1>
+
+        <div class="line"></div>
+
+    </div>
+
+    <div class="highlight-cards">
+
+        <!-- CARD 1 -->
+
+        <div class="highlight-card">
+
+            <div class="icon">
+                📦
+            </div>
+
+            <h2>
+                4 Bn+
+            </h2>
+
+            <p>
+                Parcels shipped since inception
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="highlight-card">
+
+            <div class="icon">
+                📍
+            </div>
+
+            <h2>
+                99.5%
+            </h2>
+
+            <p>
+                Indian population covered
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="highlight-card">
+
+            <div class="icon">
+                👥
+            </div>
+
+            <h2>
+                48K+
+            </h2>
+
+            <p>
+                Businesses served
+            </p>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="highlight-card">
+
+            <div class="icon">
+                🚚
+            </div>
+
+            <h2>
+                7.4 Mn+
+            </h2>
+
+            <p>
+                Tonnes freight shipped
+            </p>
+
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="highlight-card">
+
+            <div class="icon">
+                🏭
+            </div>
+
+            <h2>
+                22 M+
+            </h2>
+
+            <p>
+                Square feet logistics infrastructure covered
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+    <section class="support-heading">
+
+    <h1>Customer Support</h1>
+
+    <p>
+        We are available 24/7 to help you.
+    </p>
+
+</section>
+<section class="support-cards">
+
+    <!-- CALL SUPPORT -->
+
+    <a href="call-support.html" class="support-card">
+
+        <div class="icon">📞</div>
+
+        <h2>Call Support</h2>
+
+        <p>+91 9154433223</p>
+
+    </a>
+
+    <!-- EMAIL SUPPORT -->
+
+    <a href="email-support.html" class="support-card">
+
+        <div class="icon">✉</div>
+
+        <h2>Email Support</h2>
+
+        <p>support@primexpress.com</p>
+
+    </a>
+
+    <!-- LIVE CHAT -->
+
+    <a href="live-chat.html" class="support-card">
+
+        <div class="icon">💬</div>
+
+        <h2>Live Chat</h2>
+
+        <p>Chat with our support executives.</p>
+
+    </a>
+    
+
+</section>
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+
+            <h1>
+                Prime<span>Xpress</span>
+            </h1>
+
+            <p>
+                ISO 9001: 2015 Certified Logistics Company
+            </p>
+
+            <p>
+                CIN: PX2026LOGISTICS001
+            </p>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <h3>
+                SERVICES
+            </h3>
+
+            <a href="#">
+                Road Transport
+            </a>
+
+            <a href="#">
+                Parcel Delivery
+            </a>
+
+            <a href="#">
+                Warehousing
+            </a>
+
+            <a href="#">
+                Express Delivery
+            </a>
+
+            <a href="#">
+                International Shipping
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+                SOLUTIONS
+            </h3>
+
+            <a href="#">
+                Business Shipping
+            </a>
+
+            <a href="#">
+                Personal Courier
+            </a>
+
+            <a href="#">
+                Bulk Transportation
+            </a>
+
+            <a href="#">
+                Software Platform
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+                COMPANY
+            </h3>
+
+            <a href="#">
+                About Us
+            </a>
+
+            <a href="#">
+                Investor Relations
+            </a>
+
+            <a href="#">
+                Careers
+            </a>
+
+            <a href="#">
+                Press Release
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+                GET IN TOUCH
+            </h3>
+
+            <a href="#">
+                Support
+            </a>
+
+            <a href="#">
+                Raise Query
+            </a>
+
+            <a href="#">
+                Rate Calculator
+            </a>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+                POLICIES
+            </h3>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Cookie Policy
+            </a>
+
+            <a href="#">
+                Fraud Disclaimer
+            </a>
+
+        </div>
+
+    </div>
+
+    
+</footer>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Prime Xpress Logistics.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- ================= TRACKING SCRIPT ================= -->
+
+    <script>
+
+    const trackBtn =
+    document.getElementById("trackBtn");
+
+    const trackingInput =
+    document.getElementById("trackingInput");
+
+    const resultBox =
+    document.getElementById("resultBox");
+
+    /* BUTTON CLICK */
+
+    trackBtn.addEventListener("click", function(){
+
+        const trackingId =
+        trackingInput.value.trim();
+
+        /* EMPTY INPUT */
+
+        if(trackingId === ""){
+
+            resultBox.style.display = "none";
+
+            return;
+        }
+
+        /* TRACKING ID 1 */
+
+        if(trackingId === "PX1001"){
+
+            resultBox.innerHTML = `
+
+            <h3>Shipment Found</h3>
+
+            <p>
+                <span>Status:</span>
+                In Transit
+            </p>
+
+            <p>
+                <span>Current Location:</span>
+                Hyderabad Hub
+            </p>
+
+            <p>
+                <span>Expected Delivery:</span>
+                Tomorrow
+            </p>
+
+            `;
+
+            resultBox.style.display = "block";
+        }
+
+        /* TRACKING ID 2 */
+
+        else if(trackingId === "PX2002"){
+
+            resultBox.innerHTML = `
+
+            <h3>Shipment Delivered</h3>
+
+            <p>
+                <span>Status:</span>
+                Delivered Successfully
+            </p>
+
+            <p>
+                <span>Delivered At:</span>
+                Visakhapatnam
+            </p>
+
+            <p>
+                <span>Date:</span>
+                10 May 2026
+            </p>
+
+            `;
+
+            resultBox.style.display = "block";
+        }
+
+        /* INVALID */
+
+        else{
+
+            resultBox.innerHTML = `
+
+            <h3 style="color:red;">
+                Tracking ID Not Found
+            </h3>
+
+            <p>
+                Please enter a valid Tracking ID.
+            </p>
+
+            `;
+
+            resultBox.style.display = "block";
+        }
+
+    });
+
+    </script>
+
+</body>
+
+</html>
