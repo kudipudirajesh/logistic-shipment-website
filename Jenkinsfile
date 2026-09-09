@@ -6,9 +6,16 @@ pipeline {
                 echo 'Code checked out successfully'
             }
         }
-        stage('Confirm Pipeline Works') {
+        stage('Install Docker CLI') {
             steps {
-                echo 'Jenkins pipeline is connected and running!'
+                sh 'apt-get update && apt-get install -y docker.io'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                dir('Backend') {
+                    sh 'docker build -t logistics-backend .'
+                }
             }
         }
     }
